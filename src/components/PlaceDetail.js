@@ -78,7 +78,7 @@ const PlaceDetail = ()=>{
 
   const isData = placeData.address !== undefined;
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey:REACT_APP_GOOGLE_MAP_API_KEY// Add your API key
+    googleMapsApiKey:process.env.REACT_APP_GOOGLE_MAP_API || REACT_APP_GOOGLE_MAP_API_KEY// Add your API key
   });
 
   return (
