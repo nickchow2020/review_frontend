@@ -8,7 +8,7 @@ import Map from "../Map";
 import ParkReview from "../PlaceReview";
 import UserContext from "../../context/userContext";
 import "./SearchResult.css";
-import {REACT_APP_GOOGLE_MAP_API_KEY} from "../../keys"
+// import {REACT_APP_GOOGLE_MAP_API_KEY} from "../../keys"
 
 const SearchResult = ()=>{
   const [searchParams, setSearchParams] = useSearchParams();
@@ -44,7 +44,7 @@ const SearchResult = ()=>{
   },[])
 
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_API || REACT_APP_GOOGLE_MAP_API_KEY // Add your API key
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_API  // Add your API key
   });
 
   return (

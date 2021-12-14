@@ -4,7 +4,7 @@ import UploadImage from "./uploadImage";
 import UserContext from "../../context/userContext";
 import S3 from 'react-aws-s3';
 import API from "../../Api";
-import {REACT_APP_AWS_ACCESS_KEY,REACT_APP_AWS_SECRET_KEY} from "../../keys"
+// import {REACT_APP_AWS_ACCESS_KEY,REACT_APP_AWS_SECRET_KEY} from "../../keys"
 import "./imageUploadModal.css";
 
 const ImageUploadModal = ({uploadImage,placeId}) => {
@@ -18,8 +18,8 @@ const ImageUploadModal = ({uploadImage,placeId}) => {
   const config = {
     bucketName: 'caps2image',
     region: 'us-west-1',
-    accessKeyId: process.env.REACT_APP_AWS_ACCESS || REACT_APP_AWS_ACCESS_KEY,
-    secretAccessKey: process.env.REACT_APP_SECRET || REACT_APP_AWS_SECRET_KEY
+    accessKeyId: process.env.REACT_APP_AWS_ACCESS ,
+    secretAccessKey: process.env.REACT_APP_SECRET 
   };
 
   const ReactS3Client = new S3(config)
