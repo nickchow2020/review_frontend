@@ -1,0 +1,28 @@
+.hospitalsReviewWrapper{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hospitalViewDisplay,
+.mapDisplay{
+  width: 50%;
+}
+
+.hospitalViewDisplay{
+  border-right: solid 1px lightgray;
+}
+
+.mapDisplay{
+  border-left: solid 1px lightgray;
+}
+
+.hospitalViewDisplay{
+  margin: 1rem 0;
+}
+
+.hospitalsDisplay{
+  height: 80vh;
+  overflow: scroll;
+}

@@ -1,0 +1,76 @@
+.buttonsWrapper{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+
+.detailImageWrapper{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  overflow: scroll;
+}
+
+.image_title{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-weight: bolder;
+}
+
+.detailContextDisplay{
+  width: 60%;
+  margin: auto;
+}
+
+.about_place{
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.comment-action {
+  padding-left: 8px;
+  cursor: 'auto';
+}
+
+[class*='-col-rtl'] .comment-action {
+  padding-right: 8px;
+  padding-left: 0;
+}
+
+
+.ant-comment-content{
+  font-size: 1.3rem;
+}
+
+
+.ant-comment-inner a{
+  font-size: 1.4rem;
+}
+
+.ant-comment-inner span{
+  font-size: 1.1rem;
+}
+
+.placeDetailSeparateLine{
+  box-shadow: 2px 0 2px 0;
+}
+
+.placeDetailMap{
+  height: 300px;
+  width: 50%;
+  margin-right: 5rem;
+}
+
+
+.locationWrapper{
+  display: flex;
+  align-items:center;
+  margin: 1rem 0;
+}

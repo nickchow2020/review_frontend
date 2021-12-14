@@ -1,0 +1,22 @@
+.registerWrapper{
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formWrapper{
+  width: 70%;
+}
+
+.register_logo{
+  width: 100px;
+}
+
+.registerWrapper h1{
+  color: blue;
+  font-weight: bolder;
+  text-decoration: underline;
+}

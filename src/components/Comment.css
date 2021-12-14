@@ -1,0 +1,15 @@
+.commendDisplay{
+  text-align: left;
+}
+
+.ant-comment-actions{
+  text-align: left;
+}
+
+.rateDisplay{
+  text-align: left;
+}
+
+.rateDisplay .ant-rate-text{
+  color: red;
+}

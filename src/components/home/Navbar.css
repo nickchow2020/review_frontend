@@ -1,0 +1,50 @@
+.main_header{
+  width:  100%;
+  height: 420px;
+  background-image: url("../../image/headerbg.jpg");
+}
+
+.header_wrapper{
+  width: 75%;
+  margin: auto;
+}
+
+.header_top{
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-weight:bolder;
+  font-size: 2rem;
+}
+
+.header_wrapper ul li{
+  list-style-type: none;
+}
+
+.header_wrapper ul a{
+  color: white;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.header_wrapper ul a:hover{
+  color: rgba(255, 99, 71,100%);	
+}
+
+.header_wrapper ul a:active{
+  color: rgba(0,0,255,60%);	
+}
+
+.header_bottom{
+  padding: 0;
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  margin: auto;
+}
+
+.header_bottom li{
+  margin-right: 1rem;
+}

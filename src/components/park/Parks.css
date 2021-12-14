@@ -1,0 +1,28 @@
+.parksReviewWrapper{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.parkViewDisplay,
+.mapDisplay{
+  width: 50%;
+}
+
+.parkViewDisplay{
+  border-right: solid 1px lightgray;
+}
+
+.mapDisplay{
+  border-left: solid 1px lightgray;
+}
+
+.parkViewDisplay{
+  margin: 1rem 0;
+}
+
+.parksDisplay{
+  height: 80vh;
+  overflow: scroll;
+}

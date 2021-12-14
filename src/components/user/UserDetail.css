@@ -1,0 +1,42 @@
+.userDetailForm{
+  width: 30%;
+  margin: auto;
+}
+
+.userDetailForm input {
+  width: 80%;
+  height: 2.5rem;
+  padding: 0 1rem;
+  border: solid 1px lightskyblue;
+  border-radius: 5px;
+}
+
+.userDetailFormHeader{
+  margin: 1.5rem;
+}
+
+.userDetailForm label{
+  font-size: 1.3rem;
+}
+
+.inputSection{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.inputSection .submitBtn{
+  width: 200px;
+  outline: none;
+  border: none;
+  background-color: lightskyblue;
+  color: black;
+  font-weight: bolder;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.inputSection .submitBtn:hover{
+  background-color: tomato;
+  color: white;
+}

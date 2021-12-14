@@ -1,0 +1,30 @@
+.DogPlaceBanner{
+  width: 80%;
+  height: 350px;
+  margin: auto;
+  background-image: url("../image/chidrenbg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 3rem;
+}
+
+.DogPlaceBanner h1{
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+  font-weight: bolder;
+  color:white;
+  text-shadow: 0 1px 0 #ccc, 
+                0 2px 0 #ccc,
+                  0 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+.BannerTag{
+  margin-top: 1rem;
+}

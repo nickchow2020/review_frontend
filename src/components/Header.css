@@ -1,0 +1,50 @@
+.header_logo{
+  width: 100px;
+}
+
+.place_display_header{
+  height: 10rem;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid lightgray 1px;
+}
+
+.SearchBarWrapper{
+  width: 100%;
+}
+
+.SearchBarUl{
+  display: flex;
+  justify-content: center;
+}
+
+.SearchBarUl li{
+  list-style-type: none;
+  margin-right: 5rem;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.ant-input-wrapper{
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+}
+
+.UserAndLogout li{
+  list-style: none;
+  font-weight: bolder;
+}
+
+.UserAndLogout{
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+}
+
+.UserAndLogout li{
+  margin-top: 1rem;
+  text-decoration: underline;
+}

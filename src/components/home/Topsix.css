@@ -1,0 +1,24 @@
+.topSixWrapper{
+  width: 60%;
+  margin: auto;
+}
+
+.topSixWrapper h2{
+  font-weight: bolder;
+  margin:1rem 0;
+}
+
+.displayHomeReviewSection{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.header_underline{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: -2px 0 10px 0 green;
+}

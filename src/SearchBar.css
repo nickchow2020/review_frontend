@@ -1,0 +1,14 @@
+.ant-input-group{
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ant-btn-primary{
+  background-color: #173e1c;
+  border: none;
+}
+
+.ant-btn-primary:hover{
+  background-color: tomato;
+}
