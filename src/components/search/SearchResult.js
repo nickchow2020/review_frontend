@@ -1,6 +1,5 @@
 import React,{useState,useEffect,useContext} from "react";
 import { useSearchParams } from 'react-router-dom';
-import API from "../../Api";
 import Header from "../Header";
 import { v4 as uuid } from 'uuid';
 import { useLoadScript } from "@react-google-maps/api";
@@ -9,6 +8,7 @@ import ParkReview from "../PlaceReview";
 import UserContext from "../../context/userContext";
 import {REACT_APP_GOOGLE_MAP_API_KEY} from "../../keys"
 import "./SearchResult.css";
+import NoResult from "../../NoResult";
 
 const SearchResult = ()=>{
   const [searchParams, setSearchParams] = useSearchParams();
@@ -45,7 +45,7 @@ const SearchResult = ()=>{
             type={`${place.place_type}`}
             key={uuid()}
             />) 
-            : console.log("no result") 
+            : <NoResult />
           }
           </div>
         </div>
