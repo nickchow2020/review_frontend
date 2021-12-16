@@ -28,6 +28,31 @@ function App() {
   const [googleMapKey,setGoogleMapKey] = useState('')
   const [awsAccessKey,setAwsAccessKey] = useState('')
   const [awsSecretKey,setAwsSecretKey] = useState('')
+  const [searchResult,setSearchResult] = useState({});  
+  const [markers,setMarkers] = useState([]);
+
+
+  const handleSearchResult = async (search) =>{
+    API.token = token;
+    const searchResult = await API.getSearchResult(search)
+    setSearchResult(searchResult);
+
+    const markerData = searchResult.map(data => {
+      return {
+          id:data.id,
+          name:data.title,
+          position:{
+            lat:data.latitude,
+            lng:data.longitude
+          }
+      }
+    });
+
+    setMarkers(markerData);
+    console.log("Hello, World 5555")
+    return true
+  }
+
 
   const loginError = (msg) => {
     message.error(`${msg}`);
@@ -124,7 +149,10 @@ function App() {
         username,
         googleMapKey,
         awsAccessKey,
-        awsSecretKey
+        awsSecretKey,
+        searchResult,
+        markers,
+        handleSearch:handleSearchResult
       }}>
         <BrowserRouter>
           <Routes>

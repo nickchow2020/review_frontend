@@ -1,32 +1,31 @@
-import React,{useState,useEffect} from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
+import { useNavigate } from "react-router-dom";
 import { Input } from 'antd';
 import "./SearchBar.css";
 
 const { Search } = Input;
 
-const SearchBar = ()=>{
-  const [searchValue,setSearchValue] = useState();
-
-  const onSearch = value => setSearchValue(value);
+const SearchBar = ({handleSearch})=>{
 
   let navigate = useNavigate();
 
-  useEffect(()=>{
-    if(searchValue){
-      navigate(`/dog_place?search=${searchValue}`)
-    }
-  },[searchValue])
+  const onSearch = value => {
+    handleSearch(value)
+    navigate(`/dog_place?search=${value}`)
+  };
+
   
   return(
+    <>
       <Search
-      placeholder="input search text"
+      placeholder="search by dog place title"
       allowClear
       enterButton="Search"
       size="large"
       onSearch={onSearch}
       className="searchBar"
       />
+    </>
   )
 };
 

@@ -7,7 +7,7 @@ import Footer from "./Footer";
 import API from "./Api";
 const Home = ({user})=>{
 
-    const {checkLogin,token} = useContext(UserContext);
+    const {checkLogin,token,handleSearch} = useContext(UserContext);
     const [topSix,setTopSix] = useState({});
     const history = useNavigate();
 
@@ -29,7 +29,7 @@ const Home = ({user})=>{
 
     return (
         <>
-            <Navbar user={user}/>
+            <Navbar user={user} handleSearch={handleSearch}/>
             <TopSix topSix={topSix}/>
             <Footer />
         </>

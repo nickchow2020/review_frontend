@@ -13,34 +13,12 @@ import "./SearchResult.css";
 const SearchResult = ()=>{
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const [searchResult,setSearchResult] = useState({});
-  const {token,googleMapKey} = useContext(UserContext);
+  const {googleMapKey,markers,searchResult,handleSearch} = useContext(UserContext);
 
-  const [markers,setMarkers] = useState([]);
-  
-  const search = searchParams.get('search');
+  const search = searchParams.get("search")
 
   useEffect(()=>{
-    const getResultData = async()=>{
-      API.token = token;
-      const searchResult = await API.getSearchResult(search);
-      setSearchResult(searchResult);
-
-      const markerData = searchResult.map(data => {
-        return {
-            id:data.id,
-            name:data.title,
-            position:{
-              lat:data.latitude,
-              lng:data.longitude
-            }
-        }
-      });
-
-      setMarkers(markerData);
-    };
-
-    getResultData();
+    handleSearch(search)
   },[])
 
   const { isLoaded } = useLoadScript({
@@ -48,6 +26,7 @@ const SearchResult = ()=>{
   });
 
   return (
+    
     <>
       <Header />
       <div className="parksReviewWrapper">
@@ -66,7 +45,7 @@ const SearchResult = ()=>{
             type={`${place.place_type}`}
             key={uuid()}
             />) 
-            : null 
+            : console.log("no result") 
           }
           </div>
         </div>

@@ -6,7 +6,7 @@ import SearchBar from "../../SearchBar";
 import Avatar from "../../Avatar";
 
 
-const Header =({user})=>{
+const Header =({user,handleSearch})=>{
 
   const {username,avatar_url} = user;
 
@@ -19,7 +19,7 @@ const Header =({user})=>{
             <li><NavLink to="/logout">Logout</NavLink></li>
           </ul>
           <Logo />
-          <SearchBar />
+          <SearchBar handleSearch={handleSearch}/>
           <ul className="header_bottom">
             <li><NavLink to="/dog_parks">Park</NavLink></li>
             <li><NavLink to="/dog_hospitals">Hospital</NavLink></li>

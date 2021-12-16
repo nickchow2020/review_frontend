@@ -7,13 +7,13 @@ import "./Header.css";
 
 const Header = ()=>{
 
-  const {user} = useContext(userContext);
-
+  const {user,handleSearch} = useContext(userContext);
+  
   return (
     <div className="place_display_header">
       <Logo className="header_logo"/>
       <div className="SearchBarWrapper">
-          <SearchBar />
+          <SearchBar handleSearch={handleSearch}/>
           <ul className="SearchBarUl">
             <li><NavLink to="/dog_parks">Parks</NavLink></li>
             <li><NavLink to="/dog_hospitals">Hospitals</NavLink></li>
