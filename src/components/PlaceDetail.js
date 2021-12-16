@@ -23,9 +23,6 @@ const PlaceDetail = ()=>{
   const [markers,setMarkers] = useState([])
   const [loading,setLoading] = useState(false)
 
-
-
-
   useEffect(()=>{
     const getPlaceData = async (id,type)=>{
       API.token = localStorageLogin();

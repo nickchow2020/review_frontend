@@ -34,23 +34,27 @@ function App() {
 
   const handleSearchResult = async (search) =>{
     API.token = token;
-    const searchResult = await API.getSearchResult(search)
-    setSearchResult(searchResult);
-
-    const markerData = searchResult.map(data => {
-      return {
-          id:data.id,
-          name:data.title,
-          position:{
-            lat:data.latitude,
-            lng:data.longitude
-          }
-      }
-    });
-
-    setMarkers(markerData);
-    console.log("Hello, World 5555")
-    return true
+    try{
+      const searchResult = await API.getSearchResult(search)
+      setSearchResult(searchResult);
+  
+      const markerData = searchResult.map(data => {
+        return {
+            id:data.id,
+            name:data.title,
+            position:{
+              lat:data.latitude,
+              lng:data.longitude
+            }
+        }
+      });
+  
+      setMarkers(markerData);
+      return true
+    }catch(err){
+      setSearchResult({})
+      setMarkers([])
+    }
   }
 
 
