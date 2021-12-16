@@ -4,7 +4,7 @@ import UploadImage from "./uploadImage";
 import UserContext from "../../context/userContext";
 import S3 from 'react-aws-s3';
 import API from "../../Api";
-import {REACT_APP_AWS_ACCESS_KEY,REACT_APP_AWS_SECRET_KEY} from "../../keys"
+// import {REACT_APP_AWS_ACCESS_KEY,REACT_APP_AWS_SECRET_KEY} from "../../keys"
 import "./imageUploadModal.css";
 
 const ImageUploadModal = ({uploadImage,placeId}) => {

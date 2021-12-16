@@ -11,7 +11,7 @@ import { useLoadScript } from "@react-google-maps/api";
 import Map from "./PlaceMap";
 import CommentBox from "./comment/Comment";
 import ImageUpload from "./image/imageUploadModal";
-import {REACT_APP_GOOGLE_MAP_API_KEY} from "../keys"
+// import {REACT_APP_GOOGLE_MAP_API_KEY} from "../keys"
 import "./PlaceDetail.css";
 
 
