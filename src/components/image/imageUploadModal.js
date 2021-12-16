@@ -15,13 +15,25 @@ const ImageUploadModal = ({uploadImage,placeId}) => {
 
   const [file,setFile] = useState(null);
 
+  // for local mode
+
+  // const config = {
+  //   bucketName: 'caps2image',
+  //   region: 'us-west-1',
+  //   accessKeyId: REACT_APP_AWS_ACCESS_KEY || awsAccessKey,
+  //   secretAccessKey: REACT_APP_AWS_SECRET_KEY || awsSecretKey
+  // };
+
+  //for deploy mode
   const config = {
     bucketName: 'caps2image',
     region: 'us-west-1',
-    accessKeyId: REACT_APP_AWS_ACCESS_KEY || awsAccessKey,
-    secretAccessKey: REACT_APP_AWS_SECRET_KEY || awsSecretKey
+    accessKeyId: awsAccessKey,
+    secretAccessKey: awsSecretKey
   };
 
+
+  
   const ReactS3Client = new S3(config)
 
   const showModal = () => {

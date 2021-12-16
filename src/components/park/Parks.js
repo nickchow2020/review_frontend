@@ -43,8 +43,14 @@ const Parks = ()=>{
 
   },[token]);
 
+  // for local mode
+  // const { isLoaded } = useLoadScript({
+  //   googleMapsApiKey: REACT_APP_GOOGLE_MAP_API_KEY || googleMapKey  // Add your API key
+  // });
+
+  // for deploy mode
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: REACT_APP_GOOGLE_MAP_API_KEY || googleMapKey  // Add your API key
+    googleMapsApiKey: googleMapKey  // Add your API key
   });
 
   return (

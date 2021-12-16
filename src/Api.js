@@ -1,6 +1,11 @@
 import axios from "axios";
 
-const BASE_URL = process.env.REACT_APP_URL || 'http://localhost:3000';
+// for local mode
+// const BASE_URL = process.env.REACT_APP_URL || 'http://localhost:3000';
+
+
+// for deploy mode
+const BASE_URL = 'https://dogplacereviewapi.herokuapp.com'
 
 class AppApi {
 
