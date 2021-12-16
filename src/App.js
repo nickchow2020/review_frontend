@@ -25,6 +25,9 @@ function App() {
   const [currentUser,setCurrentUser] = useState({});
   const [token,setToken] = useLocalStorageState("token");
   const [username,setUsername] = useLocalStorageState("username");
+  const [googleMapKey,setGoogleMapKey] = useState('')
+  const [awsAccessKey,setAwsAccessKey] = useState('')
+  const [awsSecretKey,setAwsSecretKey] = useState('')
 
   const loginError = (msg) => {
     message.error(`${msg}`);
@@ -40,6 +43,9 @@ function App() {
       API.token = token;
       const user = await API.userInfo(data.username);
       setCurrentUser(user);
+      setGoogleMapKey(user.google_map_key)
+      setAwsAccessKey(user.aws_access_key)
+      setAwsSecretKey(user.aws_secret_key)
       setToken(token);
       setUsername(user.username);
       return true;
@@ -57,6 +63,9 @@ function App() {
       setCurrentUser(user);
       setToken(token);
       setUsername(user.username);
+      setGoogleMapKey(user.google_map_key)
+      setAwsAccessKey(user.aws_access_key)
+      setAwsSecretKey(user.aws_secret_key)
       return true;
     }catch(err){
       console.log(err);
@@ -90,6 +99,9 @@ function App() {
       API.token = token
       const user = await API.userInfo(username)
       setCurrentUser(user)
+      setGoogleMapKey(user.google_map_key)
+      setAwsAccessKey(user.aws_access_key)
+      setAwsSecretKey(user.aws_secret_key)
     }
 
     if(username && token){
@@ -109,7 +121,10 @@ function App() {
         checkLogin:checkUserLogin,
         updateUser:updateUser,
         token,
-        username
+        username,
+        googleMapKey,
+        awsAccessKey,
+        awsSecretKey
       }}>
         <BrowserRouter>
           <Routes>

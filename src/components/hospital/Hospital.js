@@ -6,7 +6,6 @@ import API from "../../Api";
 import { v4 as uuid } from 'uuid';
 import { useLoadScript } from "@react-google-maps/api";
 import UserContext from "../../context/userContext";
-// import {REACT_APP_GOOGLE_MAP_API_KEY} from "../../keys"
 import Map from "../Map";
 
 
@@ -14,7 +13,7 @@ const Hospital = ()=>{
 
   const [hospitals,setHospitals] = useState({});
 
-  const {token} = useContext(UserContext);
+  const {token,googleMapKey} = useContext(UserContext);
 
   const [markers,setMarkers] = useState([])
 
@@ -43,7 +42,7 @@ const Hospital = ()=>{
   },[token]);
 
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_API // Add your API key
+    googleMapsApiKey: googleMapKey // Add your API key
   });
 
   return (

@@ -11,17 +11,18 @@ import { useLoadScript } from "@react-google-maps/api";
 import Map from "./PlaceMap";
 import CommentBox from "./comment/Comment";
 import ImageUpload from "./image/imageUploadModal";
-// import {REACT_APP_GOOGLE_MAP_API_KEY} from "../keys"
 import "./PlaceDetail.css";
 
 
 const PlaceDetail = ()=>{
 
   const { id , score, type } = useParams();
-  const {localStorageLogin} = useContext(UserContext);
+  const {localStorageLogin,googleMapKey} = useContext(UserContext);
   const [placeData,setPlaceData] = useState({});
   const [markers,setMarkers] = useState([])
   const [loading,setLoading] = useState(false)
+
+
 
 
   useEffect(()=>{
@@ -77,11 +78,13 @@ const PlaceDetail = ()=>{
   }
 
   const isData = placeData.address !== undefined;
+
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey:process.env.REACT_APP_GOOGLE_MAP_API // Add your API key
+    googleMapsApiKey:googleMapKey // Add your API key
   });
 
   return (
+    
     <>
       <Header />
       {
