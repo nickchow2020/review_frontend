@@ -6,6 +6,7 @@ import API from "../../Api";
 import { v4 as uuid } from 'uuid';
 import { useLoadScript } from "@react-google-maps/api";
 import UserContext from "../../context/userContext";
+import {REACT_APP_GOOGLE_MAP_API_KEY} from "../../keys"
 import Map from "../Map";
 
 
@@ -43,7 +44,7 @@ const Parks = ()=>{
   },[token]);
 
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: googleMapKey  // Add your API key
+    googleMapsApiKey: REACT_APP_GOOGLE_MAP_API_KEY || googleMapKey  // Add your API key
   });
 
   return (

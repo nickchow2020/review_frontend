@@ -11,6 +11,7 @@ import { useLoadScript } from "@react-google-maps/api";
 import Map from "./PlaceMap";
 import CommentBox from "./comment/Comment";
 import ImageUpload from "./image/imageUploadModal";
+import {REACT_APP_GOOGLE_MAP_API_KEY} from "../keys"
 import "./PlaceDetail.css";
 
 
@@ -80,7 +81,7 @@ const PlaceDetail = ()=>{
   const isData = placeData.address !== undefined;
 
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey:googleMapKey // Add your API key
+    googleMapsApiKey: REACT_APP_GOOGLE_MAP_API_KEY || googleMapKey // Add your API key
   });
 
   return (
