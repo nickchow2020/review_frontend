@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match snapshot 1`] = `
+<DocumentFragment>
+  <span
+    class="ant-avatar ant-avatar-circle avatar"
+  >
+    <span
+      class="ant-avatar-string"
+      style="transform: scale(1) translateX(-50%);"
+    />
+  </span>
+</DocumentFragment>
+`;

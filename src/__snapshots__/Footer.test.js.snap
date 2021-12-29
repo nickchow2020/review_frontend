@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="footerWrapper"
+  >
+    <h3>
+      Copyright © 2021 Shumin Inc.
+    </h3>
+  </div>
+</DocumentFragment>
+`;
