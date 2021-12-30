@@ -4,7 +4,7 @@ import UploadImage from "./uploadImage";
 import UserContext from "../../context/userContext";
 import S3 from 'react-aws-s3';
 import API from "../../Api";
-// import {REACT_APP_AWS_ACCESS_KEY,REACT_APP_AWS_SECRET_KEY} from "../../keys"
+import {REACT_APP_AWS_ACCESS_KEY,REACT_APP_AWS_SECRET_KEY} from "../../keys"
 import "./imageUploadModal.css";
 
 const ImageUploadModal = ({uploadImage,placeId}) => {
@@ -17,20 +17,20 @@ const ImageUploadModal = ({uploadImage,placeId}) => {
 
   // for local mode
 
-  // const config = {
-  //   bucketName: 'caps2image',
-  //   region: 'us-west-1',
-  //   accessKeyId: REACT_APP_AWS_ACCESS_KEY || awsAccessKey,
-  //   secretAccessKey: REACT_APP_AWS_SECRET_KEY || awsSecretKey
-  // };
-
-  //for deploy mode
   const config = {
     bucketName: 'caps2image',
     region: 'us-west-1',
-    accessKeyId: awsAccessKey,
-    secretAccessKey: awsSecretKey
+    accessKeyId: REACT_APP_AWS_ACCESS_KEY || awsAccessKey,
+    secretAccessKey: REACT_APP_AWS_SECRET_KEY || awsSecretKey
   };
+
+  //for deploy mode
+  // const config = {
+  //   bucketName: 'caps2image',
+  //   region: 'us-west-1',
+  //   accessKeyId: awsAccessKey,
+  //   secretAccessKey: awsSecretKey
+  // };
 
 
   

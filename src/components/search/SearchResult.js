@@ -6,7 +6,7 @@ import { useLoadScript } from "@react-google-maps/api";
 import Map from "../Map";
 import ParkReview from "../PlaceReview";
 import UserContext from "../../context/userContext";
-// import {REACT_APP_GOOGLE_MAP_API_KEY} from "../../keys"
+import {REACT_APP_GOOGLE_MAP_API_KEY} from "../../keys"
 import "./SearchResult.css";
 import NoResult from "../../NoResult";
 
@@ -23,14 +23,14 @@ const SearchResult = ()=>{
 
   // for local mode
 
-  // const { isLoaded } = useLoadScript({
-  //   googleMapsApiKey: REACT_APP_GOOGLE_MAP_API_KEY || googleMapKey // Add your API key
-  // });
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: REACT_APP_GOOGLE_MAP_API_KEY || googleMapKey // Add your API key
+  });
 
   // for deploy mode
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: googleMapKey // Add your API key
-  });
+  // const { isLoaded } = useLoadScript({
+  //   googleMapsApiKey: googleMapKey // Add your API key
+  // });
 
   return (
     

@@ -11,7 +11,7 @@ import { useLoadScript } from "@react-google-maps/api";
 import Map from "./PlaceMap";
 import CommentBox from "./comment/Comment";
 import ImageUpload from "./image/imageUploadModal";
-// import {REACT_APP_GOOGLE_MAP_API_KEY} from "../keys"
+import {REACT_APP_GOOGLE_MAP_API_KEY} from "../keys"
 import "./PlaceDetail.css";
 
 
@@ -78,15 +78,15 @@ const PlaceDetail = ()=>{
   const isData = placeData.address !== undefined;
 
   // for local mode
-  // const { isLoaded } = useLoadScript({
-  //   googleMapsApiKey: REACT_APP_GOOGLE_MAP_API_KEY || googleMapKey // Add your API key
-  // });
+  const { isLoaded } = useLoadScript({
+    googleMapsApiKey: REACT_APP_GOOGLE_MAP_API_KEY || googleMapKey // Add your API key
+  });
 
 
   // for deploy mode
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: googleMapKey // Add your API key
-  });
+  // const { isLoaded } = useLoadScript({
+  //   googleMapsApiKey: googleMapKey // Add your API key
+  // });
 
   return (
     
